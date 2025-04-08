@@ -482,7 +482,7 @@ body {
   overflow: hidden;
   width: 100%;
   max-width: 100%;
-  height: 90vh;
+  height: 70vh;
 }
 
 .slider {
@@ -525,4 +525,157 @@ body {
 
 .indicators div.active {
   opacity: 1;
+}
+
+.marcas {
+  padding: 3rem;
+}
+.marcas .grid-mosaico {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3rem;
+  grid-template-areas: "saphirus aromanza" "saphirus bloqueInferior";
+}
+.marcas .grid-mosaico .saphirus {
+  grid-area: saphirus;
+  background-image: url("https://scontent.frcu1-1.fna.fbcdn.net/v/t39.30808-6/359813618_693823632757831_6437059828651980101_n.png?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeG46YXkWgsooY7c49kqixS8jbFeV0sW08CNsV5XSxbTwM0JJWASTPKDodQpOX_y8h9YjGATMupxnqlxziMGfHA3&_nc_ohc=36Q7OrKv-iAQ7kNvwGAqOOI&_nc_oc=AdlHBTc0FPrgZ5jRHY1Ay2KaiRcLAKVrNHqDI1RqW-yTkNXLEhXWVf6QkMM3gEsrhl0TgsKslQIXvM9JKmjcAGrl&_nc_zt=23&_nc_ht=scontent.frcu1-1.fna&_nc_gid=WXaNKmwCDj_zZ1B9JR0oFA&oh=00_AfFNs37ACbPZaOIxnLRzgadWB8sqhddjmklwDnYFybWB4w&oe=67FB53C6");
+}
+.marcas .grid-mosaico .aromanza {
+  grid-area: aromanza;
+  background-image: url("https://scontent.frcu1-1.fna.fbcdn.net/v/t39.30808-6/243216110_123186260075876_1655331699042318318_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEkM7Lw7lSSTuKfpTrzwzcTmMuBchMroxaYy4FyEyujFqdWONVaRq7xiFmclapAoQDhfahtxn9_kJChjXQHn7M2&_nc_ohc=Skhex8D3CkIQ7kNvwFvWokm&_nc_oc=Adnscjm6t8ojdk_xGvq6RCPw8ac-ovNTOYCIlNCJSJSO0-fFmce5Hp8UOXnJ0zikbywL9RpQiwl6C8oSMRBQ6ei2&_nc_zt=23&_nc_ht=scontent.frcu1-1.fna&_nc_gid=twcMHwNV8jHh91B1nulJ3A&oh=00_AfGgjooHrnTy6uBkrL7Y2ZyZFvzpb8LuuWfVoqs8WvMhYA&oe=67FB2AFC");
+}
+.marcas .grid-mosaico .bloqueInferior {
+  grid-area: bloqueInferior;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.marcas .grid-mosaico .bloqueInferior .sagrada {
+  background-image: url("https://scontent.frcu1-1.fna.fbcdn.net/v/t39.30808-6/367430318_285492924094998_6238453881128168005_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF2dCYYT4skkPNdybCnID4LUdmhAX5rT9NR2aEBfmtP0_jwpM5UMh8-goj5fZ-WT08vh58dRyj7SNmx8N3rLTnp&_nc_ohc=vNB0jillUcUQ7kNvwEa8i3i&_nc_oc=AdmPtR3r9CSjEqZELix5p7KRMBE_POyEjHITulLFHZ5U3gRukgWt15CMYYLf83zLfha4NfjYYzAZI_g0EcOkRo3f&_nc_zt=23&_nc_ht=scontent.frcu1-1.fna&_nc_gid=9kcTOJqHwMwK8gnWD6AoGQ&oh=00_AfF-D5-zh8w_stOWlmdwrVzizmoq7paoQukhfJEA2xKwgg&oe=67FB4642");
+}
+.marcas .grid-mosaico .bloqueInferior .sandra {
+  background-image: url("https://scontent.frcu1-1.fna.fbcdn.net/v/t39.30808-6/454565230_895330149297518_3842880559473150352_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeH9j-CViuhbwTFrwawv0gn1UHSvyGqsLytQdK_IaqwvK6YhiDLmqyWV5K63SjvAXFP1FWFHisAY-PSGLoDTkrtg&_nc_ohc=_KdNzEze83QQ7kNvwELYlqk&_nc_oc=Adl_a2PDfKkj9kUoTxHYyxXluRxgIqTJw_JN1uLDFLP2-RUPNksYPJZ_qnzyP_f9nG5qHtf9vifOkOPPMAiuQEuK&_nc_zt=23&_nc_ht=scontent.frcu1-1.fna&_nc_gid=krvpxRor3RPxgEVinhVLUg&oh=00_AfFtOakvnQHTs_ag_alSU4U2ZKqzDCnx0YfM9vY9h8Q0KQ&oe=67FB437A");
+}
+.marcas .grid-mosaico .card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+.marcas .grid-mosaico .card:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.marcas .grid-mosaico .card .overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.marcas .grid-mosaico .card .overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.marcas .grid-mosaico .card .overlay a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid white;
+  padding-bottom: 0.2rem;
+  transition: color 0.2s ease;
+  font-family: "Montserrat", sans-serif;
+}
+.marcas .grid-mosaico .card .overlay a:hover {
+  color: #ccc;
+}
+.marcas .grid-mosaico .card:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.productos-destacados {
+  padding: 2rem;
+}
+.productos-destacados h2 {
+  font-size: 5rem;
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+  text-align: center;
+  color: #b91616;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+}
+.productos-destacados .productos-destacados-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+.productos-destacados .product-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+  max-width: 350px;
+  width: 100%;
+}
+.productos-destacados .product-card:hover {
+  transform: translateY(-5px);
+}
+.productos-destacados .product-card .product-image {
+  position: relative;
+}
+.productos-destacados .product-card .product-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.productos-destacados .product-card .product-image .add-to-cart {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s;
+}
+.productos-destacados .product-card .product-image .add-to-cart:hover {
+  background: #333;
+}
+.productos-destacados .product-card .product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  margin: 5rem 0 0.9rem;
+  color: #333;
+}
+.productos-destacados .product-card .product-price {
+  font-weight: bold;
+  color: #b91616;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
 }/*# sourceMappingURL=app.css.map */

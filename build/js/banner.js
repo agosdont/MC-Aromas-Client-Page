@@ -5,15 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!slider || !indicatorsContainer) return;
 
   fetch("src/php/get_banners.php")
-    .then(response => response.json())
-    .then(banners => {
+    .then((response) => response.json())
+    .then((banners) => {
       if (!banners.length) {
         console.warn("No hay banners disponibles.");
         return;
       }
 
       // Insertar los banners
-      banners.forEach(url => {
+      banners.forEach((url) => {
         const slide = document.createElement("div");
         slide.classList.add("slide");
         slide.innerHTML = `<img src="${url}" alt="Banner">`;
@@ -51,5 +51,36 @@ document.addEventListener("DOMContentLoaded", function () {
       updateSlider();
       setInterval(autoSlide, 5000);
     })
-    .catch(error => console.error("Error al cargar banners:", error));
+    .catch((error) => console.error("Error al cargar banners:", error));
+
+});
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("src/php/get_prod_dest.php")
+    .then((res) => res.json())
+    .then((productos) => {
+      const container = document.getElementById("productos-container");
+
+      productos.forEach((producto) => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.innerHTML = `
+        <div class="product-image">
+          <img src="${producto.imagen}" alt="${
+            producto.nombre
+          }" />
+          <button class="add-to-cart">
+            <i class="icon">🛒</i>
+          </button>
+        </div>
+        <h3 class="product-title">${producto.nombre}</h3>
+        <p class="product-price">$${parseFloat(
+          producto.preciomayorista
+        ).toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>
+      `;
+        container.appendChild(card);
+      });
+    })
+    .catch((error) => {
+      console.error("Error al cargar productos:", error);
+    });
 });
