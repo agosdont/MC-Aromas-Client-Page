@@ -20,7 +20,7 @@
 
 <body>
 
-  <!--  NAVBAR  -->
+  <!--  NAVBAR - -->
 
   <nav class="navbar">
     <div class="nav-left">
