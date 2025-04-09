@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const container = document.getElementById("productos-container");
 
       productos.forEach((producto) => {
-        debugger;
+        
         const card = document.createElement("div");
         card.className = "product-card";
         card.innerHTML = `
