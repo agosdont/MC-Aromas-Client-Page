@@ -84,4 +84,18 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((error) => {
       console.error("Error al cargar productos:", error);
     });
+
 });
+
+
+function abrirWhatsApp() {
+  const telefono = "5493534595325"; // sin espacios ni signos
+  const mensaje = encodeURIComponent("¡Hola! Quisiera más info sobre los productos.");
+  
+  const urlMobile = `https://wa.me/${telefono}?text=${mensaje}`;
+  const urlWeb = `https://web.whatsapp.com/send?phone=${telefono}&text=${mensaje}`;
+
+  const isMobile = /iPhone|Android|iPad|Mobile/i.test(navigator.userAgent);
+  
+  window.open(isMobile ? urlMobile : urlWeb, "_blank");
+}
