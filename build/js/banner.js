@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const container = document.getElementById("productos-container");
 
       productos.forEach((producto) => {
+        debugger;
         const card = document.createElement("div");
         card.className = "product-card";
         card.innerHTML = `
@@ -74,7 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <h3 class="product-title">${producto.nombre}</h3>
         <p class="product-price">$${parseFloat(
-          producto.preciomayorista
+          console.log(producto),
+          producto.precio
         ).toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>
       `;
         container.appendChild(card);
