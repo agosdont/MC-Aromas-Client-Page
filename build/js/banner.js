@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <h3 class="product-title">${producto.nombre}</h3>
         <p class="product-price">$${parseFloat(
-          console.log(producto),
           producto.precio
         ).toLocaleString("es-AR", { minimumFractionDigits: 2 })}</p>
       `;
